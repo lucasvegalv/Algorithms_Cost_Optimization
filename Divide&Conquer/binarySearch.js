@@ -1,4 +1,4 @@
-// De los primeros algoritmos que vemos cuando estudiamos divide and conquer ya que, mediante esta tecnica, podemos mejorar la eficiencia y la complejidad de metodos de busqueda que vimos en cursos anteriores (insercion y seleccion por ejemplo)
+// De los primeros algoritmos que vemos cuando estudiamos divide and conquer ya que, mediante esta tecnica, podemos mejorar la eficiencia y la complejidad de metodos de busqueda que vimos en cursos anteriores.
 
 
 // Principalmente lo que hace este algoritmo es dividir a la entrada (un array en este caso) y comparar si ese numero del "medio" es el que estamos buscando. En caso de que no sea, compara si es mayor o menor. A partir de esa informacion, nos vamos a quedar con una mitad (izquierda) u otra (derecha) y repetimos el proceso hasta encontrar el numero.
