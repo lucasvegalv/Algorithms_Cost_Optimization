@@ -4,32 +4,29 @@
 
 // Merge Sort basicamente lo que hace es, de manera recursiva, ir dividiendo a la entrada hasta su minima expresion. Es decir, va a ir dividiendo al array hasta que ya no se pueda dividir mas (un solo elemento). Una vez que termina de dividir, empieza a "mergear" o combinar estos sub-problemas para formar la solucion del problema original (ordenar el array grande). A diferencia de os otros algoritmos, merge sort tiene una complejidad de N log n
 
-let arr = [5, 3, 10, 6, 20, 28, 9, 11, 43, 27, 50, 2];
-
-function mergeSort(arr) {
+function mergeSort(arr, ini, fin) {
   // Caso base
-  if(arr.length === 1) {
-    return arr;
+  if(ini === fin) {
+    return [arr[ini]];
   }
 
   // Dividimos la entrada
-  let mid = Math.floor(arr.length /2);
-  
-  // Llamados recursivos para cada mitad (seguimos dividiendo las mitades en sub-mitades)
-  let left = mergeSort(arr.slice(0, mid));
-  let right = mergeSort(arr.slice(mid));
-  
-  // Ordenamos sub-mitades
+  let mid = Math.floor((ini + fin) / 2);
+
+  let left = mergeSort(arr, ini, mid);
+  let right = mergeSort(arr, mid + 1, fin);
+
+  // Combinamos los resultados
   return merge(left, right);
 }
 
 function merge(left, right) {
 
-  sortArr = [];
+  let sortArr = [];
   let i = 0;
   let j = 0;
 
-  while((left.length > 0) && (right.length > 0)) {
+  while((left.length > i) && (right.length > j)) {
     // Comparamos posicion por posicion ambas listas y agregamos al array resultante (ordenado)
     if(left[i] <= right[j]) {
       sortArr.push(left[i]);
@@ -39,7 +36,21 @@ function merge(left, right) {
       j++;
     }
   }
+
+    // Agregamos los elementos restantes de ambas listas (si los hay)
+  while (i < left.length) {
+    sortArr.push(left[i]);
+    i++;
+  }
+
+  while (j < right.length) {
+    sortArr.push(right[j]);
+    j++;
+  }
+
   return sortArr;
 }
 
-console.log(mergeSort(arr));
+let arr = [5, 3, 10, 50, 2];
+
+console.log(mergeSort(arr, 0, (arr.length - 1)));

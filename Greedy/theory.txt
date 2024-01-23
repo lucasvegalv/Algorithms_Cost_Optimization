@@ -1,0 +1,19 @@
+Algoritmos Greedy
+
+Un algoritmo Greedy es aquel que va construyendo la solucion principal a partir de decisiones parciales basadas en la informacion disponible en cada momento.
+
+No mira hacia adelante, es decir que no ve los efectos de las decisiones a futuro y nunca reconsidera una decision que ya tomo, es decir, no vuelve para atras.
+
+En general, se utilizan para resolver problemas de optimizacion
+
+Se basan en un conjunto de candidatos a formar parte de la solucion
+
+En cada paso se toma la mejor desicion posible, evaluando si el candidato puede formar parte de la solucion o no. Si puede, se agrega, y si no se descarta
+
+Para hacer esto correctamente se deben de tener 4 funciones principales:
+  - funcion de seleccion: Selecciona el mejor candidato entre los pendientes
+  - funcion de factibilidad: Una vez seleccionado el mejor candidato, se evalua si puede formar parte de la solucion
+  - funcion solucion: Evalua si un conjunto solucion resuelve el problema
+  - funcion objetivo: Es la que debe maximizar o minimizar
+
+A lo largo del curso, iremos viendo algunos ejemplos de algoritmos que utilizan esta tecnica para resolver problemas. Entre ellos, el problema del cambio, de la mochila y algunos de grafos y recubrimiento minimo. Empecemos.
