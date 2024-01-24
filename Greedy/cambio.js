@@ -55,7 +55,6 @@ function cambio(candidatos, obj) {
   } else {
     return "No hay solución exacta con las monedas proporcionadas.";
   }
-
 }
 
 console.log(cambio(monedas, objetivo));
