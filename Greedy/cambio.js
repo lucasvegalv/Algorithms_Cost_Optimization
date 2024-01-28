@@ -41,7 +41,7 @@ function cambio(candidatos, obj) {
   let i = 0;
 
   while (acumulador < obj && i < candidatos.length) {
-    if (acumulador + candidatos[i] <= obj) {
+    if (acumulador + candidatos[i] < obj) {
       arrSolucion.push(candidatos[i]);
       acumulador += candidatos[i];
     } else {
