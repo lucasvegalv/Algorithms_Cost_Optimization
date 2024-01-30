@@ -1,0 +1,9 @@
+La programación dinámica es una técnica para resolver problemas en función de subproblemas más pequeños. Aunque comparte un enfoque similar con la técnica de Divide & Conquer, la diferencia radica en que en la programación dinámica los subproblemas son comunes, es decir, no son independientes entre sí.
+
+En esta técnica, al tener subproblemas comunes y no independientes, podemos almacenar las soluciones que vamos encontrando para reutilizarlas cuando sea necesario. Esto la convierte en una herramienta poderosa para resolver problemas de optimización.
+
+Un factor importante a considerar al utilizar esta técnica es el costo en espacio que conlleva almacenar las soluciones parciales.
+
+También se puede comparar con algoritmos Greedy, donde en lugar de tener que elegir siempre la mejor opción en el momento, en la programación dinámica podemos retroceder y verificar si las soluciones parciales previamente calculadas son mejores que las soluciones actuales.
+
+Es común encontrar ejemplos de programación dinámica en problemas como el cambio de monedas o el problema de la mochila. Estos ejemplos ayudan a ilustrar cómo se aplica la técnica en la práctica y cómo puede utilizarse para resolver una variedad de problemas de optimización. Además, es importante analizar la complejidad temporal y espacial de los algoritmos basados en programación dinámica para comprender plenamente su rendimiento y eficiencia.
